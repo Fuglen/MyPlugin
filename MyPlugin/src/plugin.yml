@@ -1,0 +1,20 @@
+name: MyPlugin
+version: 1.0.8
+description: Made by Fuglen
+author: Fuglen
+main: me.Fuglen.myplugin.MyPlugin
+#website: https://github.com/Fuglen/MyPlugin
+ 
+commands:
+    fly:
+      description: Se hvad du kan med /fly.
+      usage: /<command>
+    fire:
+      description: Sæt ild til en spiller!
+      usage: /<command>
+    time:
+      description: ændre tiden til dag eller nat.
+      usage: /<command>
+    vejr:
+      description: ændre vejret til sol, regn eller storm.
+      usage: /<command>
