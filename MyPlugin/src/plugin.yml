@@ -51,6 +51,6 @@ permissions:
     myplugin.fly:
         description: Gives yourself the ability to fly
         default: true
-    myplugin.fire.others:
+    myplugin.fly.others:
         description: Gives another player the ability to fly
         default: false
