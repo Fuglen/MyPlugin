@@ -17,26 +17,32 @@ public class MyPluginWeatherCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		
 		if(!(sender instanceof Player)) {
-			sender.sendMessage(ChatColor.RED + "Du skal vÃ¦re en spiller!");
+			sender.sendMessage(ChatColor.RED + "Du skal være en spiller!");
 		}
 			Player p = (Player) sender;
 		
 			if (cmd.getName().equalsIgnoreCase("time")) {
-				if(args.length == 0){
+				if(args.length == 0) {
 					p.sendMessage(ChatColor.YELLOW + "/time day");
 					p.sendMessage(ChatColor.YELLOW + "/time night");
 					return true;
 				}
 				
-				if (args[0].equalsIgnoreCase("day")) {
+				if (args[0].equalsIgnoreCase("day")
+		                && sender.hasPermission("myplugin.time.*")
+		                || sender.hasPermission("myplugin.time.day")
+		                || sender.hasPermission("myplugin.*")) {
 					p.setPlayerTime(1000, true);
-					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede tiden til dag!");
+					p.sendMessage(ChatColor.GREEN + "Du ændrede tiden til dag!");
 					return true;
 				}
 				
-				if (args[0].equalsIgnoreCase("night")) {
+				if (args[0].equalsIgnoreCase("night")
+		                && sender.hasPermission("myplugin.time.*")
+		                || sender.hasPermission("myplugin.time.night")
+		                || sender.hasPermission("myplugin.*")) {
 					p.setPlayerTime(15000, true);
-					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede tiden til nat!");
+					p.sendMessage(ChatColor.GREEN + "Du ændrede tiden til nat!");
 					return true;
 				}
 				return true;		
@@ -51,32 +57,44 @@ public class MyPluginWeatherCommand implements CommandExecutor {
 					return true;
 				}
 				
-				else if (args[0].equalsIgnoreCase("sun")) {
+				else if (args[0].equalsIgnoreCase("sun")
+		                && sender.hasPermission("myplugin.weather.*")
+		                || sender.hasPermission("myplugin.weather.sun")
+		                || sender.hasPermission("myplugin.*")) {
 					p.getWorld().setStorm(false);
 					p.getWorld().setThundering(false);
-					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede vejret til solskin!");
+					p.sendMessage(ChatColor.GREEN + "Du ændrede vejret til solskin!");
 					return true;
 				}
 				
-				else if (args[0].equalsIgnoreCase("rain")) {
+				else if (args[0].equalsIgnoreCase("rain")
+		                && sender.hasPermission("myplugin.weather.*")
+		                || sender.hasPermission("myplugin.weather.rain")
+		                || sender.hasPermission("myplugin.*")) {
 					p.getWorld().setStorm(true);
 					p.getWorld().setThundering(false);
-					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede vejret til regnvejr!!");
+					p.sendMessage(ChatColor.GREEN + "Du ændrede vejret til regnvejr!!");
 					return true;
 				}
 				
-				else if (args[0].equalsIgnoreCase("thunder")) {
+				else if (args[0].equalsIgnoreCase("thunder")
+                        && sender.hasPermission("myplugin.weather.*")
+                        || sender.hasPermission("myplugin.weaher.thunder")
+                        || sender.hasPermission("myplugin.*")) {
 					p.getWorld().setStorm(true);
 					p.getWorld().setThundering(true);
-					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede vejret til tordenvejr!");
+					p.sendMessage(ChatColor.GREEN + "Du ændrede vejret til tordenvejr!");
 					return true;
 				}				
 				
-				else if (args[0].equalsIgnoreCase("clear")) {
+				else if (args[0].equalsIgnoreCase("clear")
+                        && sender.hasPermission("myplugin.weather.*")
+                        || sender.hasPermission("myplugin.weather.clear")
+                        || sender.hasPermission("myplugin.*")) {
 					p.getWorld().setStorm(false);
 					p.getWorld().setThundering(false);
 					p.setPlayerTime(1000, true);
-					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede det til klart vejr!");
+					p.sendMessage(ChatColor.GREEN + "Du ændrede det til klart vejr!");
 					return true;
 				}
 				

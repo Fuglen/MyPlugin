@@ -37,8 +37,8 @@ public class MyPluginFlyCommand implements CommandExecutor {
                     	return true;
                 	}
                 
-                    else if (args.length
-    					== 2 && sender.hasPermission("myplugin.fly.others")
+                    else if (args.length == 2 
+                        && sender.hasPermission("myplugin.fly.others")
     					|| sender.hasPermission("myplugin.fly.*")
     					|| sender.hasPermission("myplugin.*")) {
                     	Player target = Bukkit.getPlayer(args[1]);

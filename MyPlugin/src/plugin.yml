@@ -54,3 +54,39 @@ permissions:
     myplugin.fly.others:
         description: Gives another player the ability to fly
         default: false
+    
+    #Permissions for /vejr
+    myplugin.weather.*:
+        description: Gives access to all weather commands
+        children:
+            myplugin.weather.sun: true
+            myplugin.weather.rain: true
+            myplugin.weather.thunder: true
+            myplugin.weather.clear: true
+
+    myplugin.weather.sun:
+        description: Gives you access to change the weather to sunshine.
+        default: true
+    myplugin.weather.rain:
+        description: Gives you access to change the weather to rain.
+        default: false
+    myplugin.weather.thunder:
+        description: Gives you access to change the weather to thunder.
+        default: true
+    myplugin.weather.clear:
+        description: Gives you access to change the weathert to thunder.
+        default: false
+    
+    #Permissions for /time
+    myplugin.time.*:
+        description: Gives access to all time commands.
+        children:
+            myplugin.time.day: true
+            myplugin.time.night: true
+
+    myplugin.time.day:
+        description: Gives you access to change the time to day.
+        default: true
+    myplugin.time.night:
+        description: Gives you access to change the time to night.
+        default: false
