@@ -1,23 +1,24 @@
 MyPlugin v.1.0.8
 
-A plugin for Minecraft (1.8.9) with many features to be added later.
+A plugin for Minecraft (1.8.9) with many features to be added later. My own "little" project im working on at my school. 
+I want to find the real power about plugins lel.
 
 Main Features
 
-    Set you or another player on fire
-    Turn on/off fly for you or another player
-    Change the time or weather on the server, both things in 1 command.
+    - Set a player on fire
+    - Turn on/off fly for a player
+    - change the time or weather
 
 To-Do-List
 
-    Config.yml
+    - Config.yml
         Messages
         Chat Prefix
-    Chat Prefix
-    Database (MySQL, SQLite or MSSQL)
-    Vault Support
+    - Chat Prefix
+    - Database (MySQL, SQLite or MSSQL)
+    - Vault Support
         Economy
         Scoreboard
-    Scoreboard
-    My own API
-    Events
+    - Scoreboard
+    - My own API
+    - Events
