@@ -1,5 +1,5 @@
 name: MyPlugin
-version: 1.0.8
+version: 1.0.9
 description: Made by Fuglen
 author: Fuglen
 main: me.Fuglen.myplugin.MyPlugin
@@ -18,3 +18,39 @@ commands:
     vejr:
       description: ændre vejret til sol, regn eller storm.
       usage: /<command>
+
+#ALL PERMISSIONS
+permissions:
+    myplugin.*:
+        description: Gives acccess to all commands
+        children:
+            myplugin.fire.*: true
+            myplugin.fly.*: true
+        
+    #Permissions for /fire
+    myplugin.fire.*:
+        description: Gives access to all fire commands
+        children:
+            myplugin.fire: true
+            myplugin.fire.others: true
+            
+    myplugin.fire:
+        description: Set yourself on fire
+        default: false
+    myplugin.fire.others:
+        description: Set other players on fire
+        default: false
+        
+    #Permissions for /fly
+    myplugin.fly.*:
+        description: Gives access to all fly commands
+        children:
+            myplugin.fly: true
+            myplugin.fly.others: true
+            
+    myplugin.fly:
+        description: Gives yourself the ability to fly
+        default: true
+    myplugin.fire.others:
+        description: Gives another player the ability to fly
+        default: false

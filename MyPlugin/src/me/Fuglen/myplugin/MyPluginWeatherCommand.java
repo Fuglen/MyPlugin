@@ -17,7 +17,7 @@ public class MyPluginWeatherCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		
 		if(!(sender instanceof Player)) {
-			sender.sendMessage(ChatColor.RED + "Du skal være en spiller!");
+			sender.sendMessage(ChatColor.RED + "Du skal vÃ¦re en spiller!");
 		}
 			Player p = (Player) sender;
 		
@@ -30,13 +30,13 @@ public class MyPluginWeatherCommand implements CommandExecutor {
 				
 				if (args[0].equalsIgnoreCase("day")) {
 					p.setPlayerTime(1000, true);
-					p.sendMessage(ChatColor.GREEN + "Du ændrede tiden til dag!");
+					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede tiden til dag!");
 					return true;
 				}
 				
 				if (args[0].equalsIgnoreCase("night")) {
 					p.setPlayerTime(15000, true);
-					p.sendMessage(ChatColor.GREEN + "Du ændrede tiden til nat!");
+					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede tiden til nat!");
 					return true;
 				}
 				return true;		
@@ -54,21 +54,21 @@ public class MyPluginWeatherCommand implements CommandExecutor {
 				else if (args[0].equalsIgnoreCase("sun")) {
 					p.getWorld().setStorm(false);
 					p.getWorld().setThundering(false);
-					p.sendMessage(ChatColor.GREEN + "Du ændrede vejret til solskin!");
+					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede vejret til solskin!");
 					return true;
 				}
 				
 				else if (args[0].equalsIgnoreCase("rain")) {
 					p.getWorld().setStorm(true);
 					p.getWorld().setThundering(false);
-					p.sendMessage(ChatColor.GREEN + "Du ændrede vejret til regnvejr!!");
+					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede vejret til regnvejr!!");
 					return true;
 				}
 				
 				else if (args[0].equalsIgnoreCase("thunder")) {
 					p.getWorld().setStorm(true);
 					p.getWorld().setThundering(true);
-					p.sendMessage(ChatColor.GREEN + "Du ændrede vejret til tordenvejr!");
+					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede vejret til tordenvejr!");
 					return true;
 				}				
 				
@@ -76,7 +76,7 @@ public class MyPluginWeatherCommand implements CommandExecutor {
 					p.getWorld().setStorm(false);
 					p.getWorld().setThundering(false);
 					p.setPlayerTime(1000, true);
-					p.sendMessage(ChatColor.GREEN + "Du ændrede det til klart vejr!");
+					p.sendMessage(ChatColor.GREEN + "Du Ã¦ndrede det til klart vejr!");
 					return true;
 				}
 				

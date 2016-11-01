@@ -4,17 +4,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
 	
-	//Skriver en besked til console når dette plugin bliver aktiveret.
+	//Skriver en besked til console nï¿½r dette plugin bliver aktiveret.
 	@Override
 	public void onEnable() {
-		Bukkit.getServer().getLogger().info("Fly has been enabled, made by Fuglen!");
+		Bukkit.getServer().getLogger().info("Myplugin has been enabled, made by Fuglen!");
 		this.getCommand("fly").setExecutor(new MyPluginFlyCommand(this));
 		this.getCommand("fire").setExecutor(new MyPluginFireCommand(this));
 		this.getCommand("time").setExecutor(new MyPluginWeatherCommand(this));
 		this.getCommand("vejr").setExecutor(new MyPluginWeatherCommand(this));
 	}
 	
-	//Skriver en besked til console når dette plugin bliver deaktiveret.
+	//Skriver en besked til console nï¿½r dette plugin bliver deaktiveret.
 	@Override
 	public void onDisable() {
 		Bukkit.getServer().getLogger().info("Fly has been disabled, made by Fuglen!");		

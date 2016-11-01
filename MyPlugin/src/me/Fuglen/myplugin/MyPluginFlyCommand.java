@@ -15,7 +15,7 @@ public class MyPluginFlyCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
     
 		if(!(sender instanceof Player)){
-			sender.sendMessage(ChatColor.RED + "Du skal være en spiller!");
+			sender.sendMessage(ChatColor.RED + "Du skal vÃ¦re en spiller!");
 			return true;
 		}
 		
@@ -29,7 +29,7 @@ public class MyPluginFlyCommand implements CommandExecutor {
             	return true;
             }
         	
-        		//Kommando til /fly on så man kan slå det til.
+        		//Kommando til /fly on sï¿½ man kan slï¿½ det til.
                 if (args[0].equalsIgnoreCase("on")) {
                     if (args.length == 1) {
     					player.setAllowFlight(true);
@@ -50,11 +50,11 @@ public class MyPluginFlyCommand implements CommandExecutor {
                     }
                 }
                 
-                //Kommando til /fly off så man kan slå det fra.
+                //Kommando til /fly off sï¿½ man kan slï¿½ det fra.
                 else if (args[0].equalsIgnoreCase("off")) {
                     if (args.length == 1) {
     					player.setAllowFlight(false);
-    					player.sendMessage(ChatColor.GREEN + "Du kan ikke længere flyve!");
+    					player.sendMessage(ChatColor.GREEN + "Du kan ikke lÃ¦ngere flyve!");
                     	return true;
                 	}
                 
@@ -66,7 +66,7 @@ public class MyPluginFlyCommand implements CommandExecutor {
         				}
                     	target.setAllowFlight(false);
                     	target.sendMessage(ChatColor.YELLOW + sender.getName() + ChatColor.GREEN + ", har fjernet din tilladelse til at flyve!");
-                    	player.sendMessage(ChatColor.YELLOW + target.getName() + ChatColor.GREEN + ", kan ikke længere flyve!");
+                    	player.sendMessage(ChatColor.YELLOW + target.getName() + ChatColor.GREEN + ", kan ikke lÃ¦ngere flyve!");
                     	return true;
                     }
                 }

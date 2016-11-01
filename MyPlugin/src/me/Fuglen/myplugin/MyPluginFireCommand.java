@@ -15,13 +15,21 @@ public class MyPluginFireCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 
 	    if (cmd.getName().equalsIgnoreCase("fire")) {
-			if (args.length == 0) {
+			if (args.length 
+					== 0 && sender.hasPermission("myplugin.fire")
+					|| sender.hasPermission("myplugin.fire.*")
+					|| sender.hasPermission("myplugin.*")) {
+				
 				((Player) sender).setFireTicks(200);
 				sender.sendMessage(ChatColor.RED + "Du satte ild til dig selv!");
+			} else {
+					sender.sendMessage(ChatColor.DARK_RED + "Du har ikke adgang til denne kommando.");
+				}
 				return true;
+				
 			}
 	    
-		//Er brugeren en rigtig spiller? Nej? så skriver vi til ham at han skal være det!
+		//Er brugeren en rigtig spiller? Nej? Så skulle han til at blive det!
 		if(!(sender instanceof Player)){
 			sender.sendMessage(ChatColor.RED + "Du skal være en spiller!");
 			return true;
@@ -33,13 +41,20 @@ public class MyPluginFireCommand implements CommandExecutor {
 			sender.sendMessage(ChatColor.RED + "Spilleren er ikke online!");
 			return true;
 		}
-		
+		else if (sender.hasPermission("myplugin.fire.others") 
+				|| sender.hasPermission("myplugin.fire.*") 
+				|| sender.hasPermission("myplugin.*") ) {
 		sender.sendMessage(ChatColor.GOLD + "BURN BABY, BURN!");
 		target.setFireTicks(200);
 		return true;
 		
-	    }
-		return true;
-	    }
-	}
+		}
+		
+		else {
+			sender.sendMessage(ChatColor.DARK_RED + "Du har ikke adgang til denne kommando.");
+		}
+	    
+	return false;
+    }
+}
 
