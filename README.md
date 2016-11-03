@@ -8,7 +8,8 @@ Main Features
     - Set a player on fire
     - Turn on/off fly for a player
     - change the time or weather
-    - Permissions for all commands
+    - Permissions for all commands and most of the events
+    - Write a message to the player when he/she joins (works with names too)
 
 To-Do-List
 
