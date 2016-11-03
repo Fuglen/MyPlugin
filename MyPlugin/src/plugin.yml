@@ -90,3 +90,14 @@ permissions:
     myplugin.time.night:
         description: Gives you access to change the time to night.
         default: false
+        
+    #Permissions for the join event
+    myplugin.join.*:
+        description: Gives you access to everything with the join event.
+        children:
+            myplugin.join.message: true
+    
+    myplugin.join.message:
+        description: Gives you access to recieve an message when you join the server.
+        default: true
+        
