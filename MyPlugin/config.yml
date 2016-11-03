@@ -1,4 +1,8 @@
 # MyPlugin by Fuglen - Default config.yml #
 # Version 1.0
-
+ 
+# Do you want your players to recieve a message when they join the server?
+Welcome Players: false
+ 
+# Custom message for your players. %player% will be the players name.
 Welcome Message: '&2Hej og velkommen %player%!'
