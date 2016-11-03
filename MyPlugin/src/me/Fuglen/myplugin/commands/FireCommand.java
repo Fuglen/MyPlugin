@@ -8,9 +8,9 @@ import org.bukkit.entity.Player;
 
 import me.Fuglen.myplugin.MyPlugin;
 
-public class MyPluginFireCommand implements CommandExecutor {
+public class FireCommand implements CommandExecutor {
 
-    public MyPluginFireCommand(MyPlugin myPlugin) {
+    public FireCommand(MyPlugin myPlugin) {
     }
     
     @Override

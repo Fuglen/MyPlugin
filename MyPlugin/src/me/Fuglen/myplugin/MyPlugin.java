@@ -4,10 +4,10 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.Fuglen.myplugin.commands.MyPluginFireCommand;
-import me.Fuglen.myplugin.commands.MyPluginFlyCommand;
-import me.Fuglen.myplugin.commands.MyPluginWeatherCommand;
-import me.Fuglen.myplugin.event.MyPluginPlayerJoin;
+import me.Fuglen.myplugin.commands.FireCommand;
+import me.Fuglen.myplugin.commands.FlyCommand;
+import me.Fuglen.myplugin.commands.WeatherCommand;
+import me.Fuglen.myplugin.event.PlayerJoin;
 
 public class MyPlugin extends JavaPlugin {
 	
@@ -35,13 +35,13 @@ public class MyPlugin extends JavaPlugin {
 	
 	public void registerEvents() {
 	    PluginManager pm = getServer().getPluginManager();
-	    pm.registerEvents(new MyPluginPlayerJoin(this), this); 
+	    pm.registerEvents(new PlayerJoin(this), this); 
 	}
 	
 	public void registerCommands() {
-	    getCommand("fly").setExecutor(new MyPluginFlyCommand(this));
-	    getCommand("fire").setExecutor(new MyPluginFireCommand(this));
-	    getCommand("time").setExecutor(new MyPluginWeatherCommand(this));
-	    getCommand("vejr").setExecutor(new MyPluginWeatherCommand(this));
+	    getCommand("fly").setExecutor(new FlyCommand(this));
+	    getCommand("fire").setExecutor(new FireCommand(this));
+	    getCommand("time").setExecutor(new WeatherCommand(this));
+	    getCommand("vejr").setExecutor(new WeatherCommand(this));
 	}
 }

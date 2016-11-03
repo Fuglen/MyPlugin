@@ -8,11 +8,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import me.Fuglen.myplugin.MyPlugin;
 
-public class MyPluginPlayerJoin implements Listener {
+public class PlayerJoin implements Listener {
     
     private MyPlugin plugin;
     
-    public MyPluginPlayerJoin(MyPlugin pl) {
+    public PlayerJoin(MyPlugin pl) {
         plugin = pl;
     }
     
