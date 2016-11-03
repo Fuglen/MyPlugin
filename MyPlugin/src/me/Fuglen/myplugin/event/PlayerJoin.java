@@ -19,6 +19,11 @@ public class PlayerJoin implements Listener {
     // Når en spiller joiner serveren, køres dette stykke kode.
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
+        if(plugin.getConfig().getBoolean("Welcome Players") == true 
+                && event.getPlayer().hasPermission("myplugin.join.message")
+                || event.getPlayer().hasPermission("myplugin.join.*")
+                || event.getPlayer().hasPermission("myplugin.*")) {
+            
         Player player = event.getPlayer();
         
         String WelcomeMessage;
@@ -29,5 +34,10 @@ public class PlayerJoin implements Listener {
         WelcomeMessage = WelcomeMessage.replace("%player%", Player);
         
         player.sendMessage(WelcomeMessage);
+        }
+        
+        else {
+            return;
+        }
     }
 }
