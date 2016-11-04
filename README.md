@@ -16,7 +16,7 @@ Main Features
 - Permissions for all commands and most of the events
 - Write a message to the player when he/she joins (works with names too)
 
-[SPOILER="Player Commands:"]
+Player Commands
 /fly on/off <player>
 Set fly on or off for you or another player
 Permissions: myplugin.fly, myplugin.fly.others or myplugin.fly.*
@@ -28,7 +28,7 @@ Permissions: myplugin.fire, myplugin.fire.others or myplugin.fire.*
 /time [day/night]
 Set the time in the world to day or night
 Permissions: myplugin.time.day, myplugin.time.night or myplugin.time.*
-[/SPOILER]
+
 
 ALL PERMISSIONS
 Simply as it says, it gives you everything. Made for admins/staff
@@ -52,3 +52,5 @@ Scoreboard
 - Scoreboard
 - My own API
 - Events
+
+DOWNLOAD HERE - https://www.spigotmc.org/resources/myplugin.31265/
